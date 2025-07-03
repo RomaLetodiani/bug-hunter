@@ -1,27 +1,11 @@
 import React from 'react';
 import './App.css';
-import { 
-  Navbar, 
-  Hero, 
-  AboutPodcast, 
-  MeetHosts, 
-  LatestEpisodes, 
-  ListenEverywhere, 
-  Footer 
-} from './components';
+import BugHunterGame from './BugHunterGame';
 
 function App() {
   return (
     <div className="App">
-      <div className="min-h-screen bg-gray-900 text-white">
-        <Navbar />
-        <Hero />
-        <AboutPodcast />
-        <MeetHosts />
-        <LatestEpisodes />
-        <ListenEverywhere />
-        <Footer />
-      </div>
+      <BugHunterGame />
     </div>
   );
 }
