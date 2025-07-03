@@ -1041,7 +1041,8 @@ const BugHunterGame = () => {
     };
 
     const updateGameStats = () => {
-      setGameStats({
+      setGameStats(prev => ({
+        ...prev,
         score: gameStateRef.current.score,
         level: gameStateRef.current.level,
         lives: gameStateRef.current.lives,
@@ -1049,12 +1050,10 @@ const BugHunterGame = () => {
         accuracy: gameStateRef.current.accuracy,
         isGameOver: gameStateRef.current.lives <= 0,
         isPlaying: gameStateRef.current.isPlaying,
-        showSettings: false,
-        showAchievements: false,
         activePowerUps: { ...gameStateRef.current.activePowerUps },
         currentLanguage: gameStateRef.current.language,
         currentTheme: gameStateRef.current.theme
-      });
+      }));
     };
 
     const endGame = () => {
